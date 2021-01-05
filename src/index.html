@@ -5,63 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Link to CSS file-->
     <link href="css/sass/main.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>Mall Moment 3.2</title>
+    <!--<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Kurser Webbutveeckling</title>
 </head>
 <body>
     <header>
-        
-        <nav id="mainNav">
-            <ul>
-                <li><a href="index.html">Start</a></li>
-                <li><a href="#">Nyheter</a></li>
-                <li><a href="#">Om oss</a>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Bilder</a></li>
-            </ul>
-        </nav>
-        <div id="navButton">
-            <div class="burger"></div>
-            <div class="burger"></div>
-            <div class="burger"></div>
-        </div>
-        <!-- Läser in mobilmeny -->
-        <nav id="hiddenNav">
-            <ul>
-                <li><a href="index.html">Start</a></li>
-                <li><a href="#">Nyheter</a></li>
-                <li><a href="#">Om oss</a>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Bilder</a></li>
-            </ul>
-        </nav>
-
+        <h1 class="headline center">Kurser Webbutveckling </h1>
     </header>
-    <section id="wrapper">
-        <h1 class="headline center">Nyheter</h1>
-        <section id="articles">
-			<article class="articleLeft">
-				<h2>Polarisen smälter</h2>
-				<a target="blank" href="images/glacier.jpg"><img src="images/glacier.jpg" class="imgNews" alt="Glacier"></a>
-				<p class=date>2020-09-12</p>
-				<p>Nya rön från forskare visar att polarisarna smälter fortare än vad man tidigare trott och om ingeting görs snarast kommer isarna vara borta om 50 år. Detta kommer få ödesdigra konsekvenser då detta innebär att havsnivån kommer att stiga 10 meter de kommande 20 åren. </p>
-			</article>
-
-			<article class="articleMiddle">
-				<h2>Räntehöjning</h2>
-				<a target="blank" href="images/houses.jpg"><img src="images/houses.jpg" class="imgNews" alt="Houses"></a>
-				<p class="date">2020-09-12</p>
-				<p>Nu chockhöjs räntorna på bostadsmarkanden samtidigt som amorteringskraven skärps ytterligare. Detta kan komm att få förödande konsekvenser för lånetagare med redan höga räntor.</p>
-			</article>
-
-			<article class="articleRight">
-				<h2>Grammisvinnarna</h2>
-				<a target="blank" href="images/band.jpg"><img src="images/band.jpg" class="imgNews" alt="The Moonwalking Monkeys"></a>
-				<p class="date">2020-09-12</p>
-				<p>Årets stora vinnare på Grammis-galan var utan tvekan The Moonwalking Monkeys som med sju nomineringar tog hem inte mindre än fem vinster, däribland årets nykomling och bästa pop.</p>
-            </article>
+    <div id="wrapper">
+        <section>
+            <h2>Lästa kurser</h2>
+            <table id="courseList"></table>
         </section>
-    </section>   
+
+        <section id="newCourse">
+            <h2>Lägg till en ny kurs</h2>
+            <form>
+                <label for="courseCode">Kurskod: </label><br/>
+                <input type="text" id="courseCode" name="courseCode"><br/>
+                <label for="courseName">Kursnamn: </label><br/>
+                <input type="text" id="courseName" name="courseName"><br/>
+                <label for="progression">Progression: </label><br/>
+                <input type="text" id="progression" name="progression"><br/>
+                <label for="syllabus">Länk till Kursplan:</label><br/>
+                <input type="text" id="syllabus" name="syllabus"><br/>
+                <button id="addCourse">Lägg till kurs</button>
+            </form>
+
+        </section>
+        
+    </div><!-- END WRAPPER-->   
               
     <footer>
         <p>DT173G - Webbutveckling III</p>
