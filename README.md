@@ -1,10 +1,8 @@
-# Webbplats som läser in kurser via API
+# Administrationswebbplats för portfolio
 
-En webbplats som med hjälp utav Fetch och Promises hämtar in och skriver ut kurser från Mittuniversitet via ett externt API. Det är även möjligt att själva lägga till eller ta bort kurser ur listan.   
+En webbplats som hanterar den data som presenteras på portfoliosidan.   
 
 Webbplatsen har skapats med HTML, CSS och JavaScript. För utvecklingen har SCSS och ES6 använts men för publicering har dessa anpassats till vanlig CSS och ES5 för att få stöd i webbläsare. Automatisering har gjorts med hjälp ut Gulp. 
 
-Länk till färdig webbplats: 
-http://moment5.hilleviannfalt.se/ 
 
-### Skrivet av **Hillevi Annfält** 2020-12-18
+### Skrivet av **Hillevi Annfält** 2021-01-20
