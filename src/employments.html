@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="index.html">Start</a></li>
                 <li><a href="employments.html">Anställningar</a></li>
-                <li><a href="educationss.html">Utbildningar</a></li>
+                <li><a href="educations.html">Utbildningar</a></li>
                 <li><a href="projects.html">Projekt</a></li>
             </ul>
         </nav>      
@@ -25,11 +25,27 @@
     <div id="wrapper">
         <h1 class="center">Portfolio Inställningar</h1>
         <h2 class="center">Hillevi Annfält - Webbutvecklare</h2>
-        <section id="linkSection">
-            <h2>Vad vill du göra?</h2>
-            <a href="employments.html">Hantera Anställningar</a>
-            <a href="educations.html">Hantera Utbildningar</a>
-            <a href="projects.html">Hantera Projekt</a>
+        <a href="#newEmployment" class="linkButton">Lägg till ny anställning</a>
+
+        <section id="employmentList" class="contentList">
+        </section>
+
+        <section id="newEmployment">
+            <h2>Lägg till ny anställning</h2>
+            <form>
+                <label for="employer">Företag: </label><br/>
+                <input type="text" id="employer" name="employer"><br/>
+                <label for="title">Titel: </label><br/>
+                <input type="text" id="title" name="title"><br/>
+                <label for="employStartDate">Startdatum (Månad/År):</label><br/>
+                <input type="text" id="employStartDate" name="employStartDate"><br/>
+                <label for="employEndDate">Slutdatum (Månad/År):</label><br/>
+                <input type="text" id="employEndDate" name="employEndDate"><br/>
+                <label for="employDescription">Beskrivning:</label><br/>
+                <input type="text" id="employDescription" name="employDescription"><br/>
+                <button id="addEmployment">Lägg till</button>
+            </form>
+
         </section>
         
     </div><!-- END WRAPPER-->   

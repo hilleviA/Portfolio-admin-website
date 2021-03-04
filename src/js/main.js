@@ -1,70 +1,31 @@
 'use strict';
 
-//Variabler 
-const URL = "http://courses.hilleviannfalt.se";
+//Kontrollerar vilken sida som visas och kör funktion utifrån det (för att undvika fel vid med eventlisteners)
+window.addEventListener("load", loadContent);
 
-let courseList = document.getElementById("courseList");
-let codeInput = document.getElementById("courseCode");
-let nameInput = document.getElementById("courseName");
-let progressionInput = document.getElementById("progression");
-let syllabusInput = document.getElementById("syllabus");
-let addCourseButton = document.getElementById("addCourse");
+function loadContent() {
 
-//Event hanterare
-window.addEventListener("load", getCourses);
-
-addCourseButton.addEventListener("click", function(event){
-    event.preventDefault();
-    addNewCourse();
-});
-
-//Läser in kurser
-function getCourses() {
-    courseList.innerHTML = "";
-
-    fetch(URL)
-    .then(res => res.json())
-    .then(data => {
-        courseList.innerHTML = "<tr><th>Kurskod</th> <th>Kursnamn</th> <th>Progression</th> <th>Kursplan</th> <th>Ta bort</th></tr>";
-        data.forEach(course => {
-            courseList.innerHTML +=`<tr><td> ${course.CourseCode}</td> <td>${course.CourseName}</td> <td> ${course.Progression}</td> <td><a href='${course.CourseSyllabus}'>Kursplan</a></td> <td><button id="${course.ID}" class="remove" onClick="deleteCourse(${course.ID})">X</button></td></tr>`;
-        })   
-    })
-}
-//Tar bort en kurs
-function deleteCourse(id) {
-    fetch(URL + "?ID=" + id, {
-        method: "DELETE",
-    })
-    .then(res => res.json())
-    .then(data => {
-        getCourses();
-    })
-    .catch(error => {
-        console.log(`Fel: ${error}`);
-    })
+    if(document.getElementById("addEmployment")) {
+        getEmployments();
+        addEmploymentButton.addEventListener("click", function(event){
+            event.preventDefault();
+            addEmployment();
+        });
+    }
+    else if (document.getElementById("addEducation")) {
+        getEducations();
+        addEducationButton.addEventListener("click", function(event){
+            event.preventDefault();
+            addEducation();
+        });
+    }
+    else if (document.getElementById("addProject")) {
+        getProjects();
+        addProjectButton.addEventListener("click", function(event){
+            event.preventDefault();
+            addProject();
+        });
+        
+    }  
 }
 
-//Lägger till ny kurs
-function addNewCourse() {
-
-    let code = codeInput.value;
-    let name = nameInput.value;
-    let progression = progressionInput.value;
-    let syllabus = syllabusInput.value;
-    
-    //Skapar nytt objekt med inskickad data
-    let course =  {"code": code, "name": name, "progression": progression, "courseSyllabus": syllabus };
-
-    fetch(URL, {
-        method: "POST",
-        body: JSON.stringify(course),
-    })
-    .then(res => res.json())
-    .then( data => {
-        location.reload();
-    })
-    .catch(error=> {
-        console(`Fel: ${error}`);
-    })    
-}

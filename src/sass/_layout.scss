@@ -1,39 +1,93 @@
 body {
-    background-color: $background-color;
-    font-family: $font-stack;  
+    font-family: $font-stack;
 }
 
-h1 {
-    font-size: 30px;
+//Klasser
+.center {
     text-align: center;
 }
 
-h2 {
-    margin: 50px 0 20px;
+.hidden {
+    display: none;
 }
 
+.linkButton {
+    width: 20%;
+    background-color: $main-color;
+    color: $detail-font-color;
+    padding: 12px 20px;
+    border-radius: 4px;
+    display: block;
+    margin: 40px auto;
+    text-decoration: none;
+    text-align: center;
 
-
-header {
-    @include detail-color-theme;
-    padding: 40px 0;
+    
 }
+.linkButton:hover {
+    background-color: $detail-color;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
 
 #wrapper {
-    max-width: 1200px;
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 }
 
+header {
+    text-align: center;
+    padding: 25px 0;
+
+    #mainMenu ul li {
+        display: inline;
+        margin-right: 30px;
+        font-weight: 500;
+    }
+    #mainMenu ul li a {
+        text-decoration: none;
+        color: $main-color;
+    }
+    #mainMenu ul li a:hover {
+        text-decoration: none;
+        color: $detail-color;
+    }
+
+}
 section {
     max-width: 800px;
-    width: 94%;
-    padding: 3%;
+    width: 100%;
     margin: 0 auto; 
 }
   
+#linkSection {
+    margin-top: 75px;
+     a {
+        width: 30%;
+        background-color: $main-color;
+        color: $detail-font-color;
+        padding: 12px 20px;
+        margin: 20px 0;
+        border: none;
+        border-radius: 4px;
+        display: block;
+        text-decoration: none;
+     }
+     a:hover {
+        background-color: $detail-color;
+     }
+}
+
+.contentList {
+    margin: 75px auto;
+}
+
+
 footer {
-    @include detail-color-theme;
     text-align: center;
     margin-top: 100px;
     padding: 30px;

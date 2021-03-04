@@ -22,10 +22,10 @@ const filePaths = {
 
 //Kopierar och minifierar bilder till Pub-katalogen
 function imageTask() {
-    return src(filePaths.imagePath)
+    return src(filePaths.imagePath) 
     .pipe(imagemin())
     .pipe(dest("pub/images"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream()); 
 };
 
 //Kopierar och minifierar HTML-filer till Pub-katalogen

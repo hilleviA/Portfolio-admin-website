@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="index.html">Start</a></li>
                 <li><a href="employments.html">Anställningar</a></li>
-                <li><a href="educationss.html">Utbildningar</a></li>
+                <li><a href="educations.html">Utbildningar</a></li>
                 <li><a href="projects.html">Projekt</a></li>
             </ul>
         </nav>      
@@ -25,11 +25,23 @@
     <div id="wrapper">
         <h1 class="center">Portfolio Inställningar</h1>
         <h2 class="center">Hillevi Annfält - Webbutvecklare</h2>
-        <section id="linkSection">
-            <h2>Vad vill du göra?</h2>
-            <a href="employments.html">Hantera Anställningar</a>
-            <a href="educations.html">Hantera Utbildningar</a>
-            <a href="projects.html">Hantera Projekt</a>
+        <a href="#newEmployment" class="linkButton">Lägg till nytt projekt</a>
+
+        <section id="projectList" class="contentList">
+        </section>
+
+        <section id="newProject">
+            <h2>Lägg till nytt projekt</h2>
+            <form>
+                <label for="projectTitle">Namn: </label><br/>
+                <input type="text" id="projectTitle" name="projectTitle"><br/>
+                <label for="projectUrl">Länk: </label><br/>
+                <input type="text" id="projectUrl" name="projectUrl"><br/>
+                <label for="projectDescription">Beskrivning:</label><br/>
+                <input type="text" id="projectDescription" name="projectDescription"><br/>
+                <button id="addProject">Lägg till</button>
+            </form>
+
         </section>
         
     </div><!-- END WRAPPER-->   

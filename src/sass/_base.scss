@@ -1,13 +1,10 @@
 //Varibles for fonts
-$font-stack: "Roboto", Helvetica, sans-serif;
-$background-color: #FFFFFF;
+$font-stack: "Ubuntu", Monospace;
 $font-color: #10120C;
-$detail-color: #FF8418;
+$main-color: #4D005C;
+$detail-color: #A8063D ;
 $detail-font-color: #FFFFFF;
 
 
-//Themes
-@mixin detail-color-theme {
-    background-color: $detail-color;
-    color: $detail-font-color;  
-}
+
+
